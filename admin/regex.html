@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container w-50 mt-4">
+     <form action="">
+        <input type="text" class="form-control" id="name" placeholder="entre user name">
+        <div id="demo" class="text-success fw-bold text-center"></div>
+        <button type="submit" class="btn btn-primary mt-3 d-flex m-auto" onclick="myFunction()">submit</button>
+     </form>   
+    </div>
+    <script>
+        function myFunction()
+        {
+            event.preventDefault();
+            var regex = /^[a-zA-Z].{3}$/;
+            var uname=document.getElementById('name').value;
+            var result=regex.text(uname);
+
+            if(result == true)
+            {
+                text = " valid !";
+            }
+            else
+            {
+                text="invalid !"
+            }
+            document.getElementById('demo') .innerHTML=text;
+        }
+    </script>
+</body>
+</html>
+
